@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>MyRailsSandbox</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<body>
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+  <h5 class="my-0 mr-md-auto font-weight-bold">Super-puper blog</h5>
+  <nav class="my-2 my-md-0 mr-md-3">
+    <span class="p-2 text-dark"><%= link_to "Главная страница", home_path %></span>
+    <span class="p-2 text-dark"><%= link_to "Про нас", about_path %></span>
+  </nav>
+  <span class="p-2 text-dark"><%= link_to "Добавление статьи", new_post_path %></span>
+</div>
+<div class="container">
+  <%= yield %>
+</div>
+</body>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <title>MyRailsSandbox</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
-    <%= yield %>
-  </body>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' %>
+
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 </html>
