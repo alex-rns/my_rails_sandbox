@@ -1,5 +1,17 @@
-  <div class="alert alert-light">
-    <h3><%= post.title %></h3>
-    <p><%= post.body %></p>
-    <%= link_to "Читать далее..", post_path(post), class: 'btn btn-outline-primary' %>
-  </div>
+<article class="post">
+  <section class="post-head">
+    <div class="alert alert-light">
+      <small>
+        <time>
+          <%=post.created_at.to_date.strftime("%d, %B, %Y") %>
+        </time>
+      </small>
+      <h3><%= post.title %></h3>
+      <p><%= post.body %></p>
+      <%= link_to "Читать далее..", post_path(post), class: 'btn btn-outline-success' %>
+      <%= link_to "Изменить", edit_post_path(post), class: 'btn btn-outline-info' %>
+      <%= link_to "Удалить", post_path(post), method: :delete, data: {confirm: "Хотите удалить статью?"}, class: 'btn btn-outline-danger'  %>
+    </div>
+  </section>
+</article>
+
