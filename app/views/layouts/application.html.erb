@@ -20,7 +20,7 @@
 </div>
 <div class="container">
   <div class="row">
-    <%= flash.each do |name, mes| %>
+    <% flash.each do |name, mes| %>
     <div class="alert alert-<%= name %>">
       <%= mes %>
     </div>
