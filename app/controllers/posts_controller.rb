@@ -19,24 +19,24 @@ class PostsController < ApplicationController
 
   def update
     if @post.update(post_params)
-      redirect_to @post
+      redirect_to @post, success: "Пост обновлён"
     else
-      render :edit
+      render :edit, danger: "Пост не обновлён"
     end
   end
 
   def destroy
     @post.destroy
-    redirect_to posts_path
+    redirect_to posts_path, success: "Пост удалён"
   end
 
   def create
     # render plain: params[:post].inspect
     @post = Post.new(post_params)
     if @post.save
-      redirect_to @post
+      redirect_to @post, success: "Пост создан"
     else
-      render :new
+      render :new, danger: "Пост не создан"
     end
   end
 
