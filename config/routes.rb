@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   get 'about' => 'pages#about', as: 'about'
 
-  resources :articles
+  resources :articles do
+    resources :article_comments
+  end
 
   resources :posts do
     resources :comments
