@@ -1,5 +1,4 @@
 class ArticlesController < ApplicationController
-
   def index
     @articles = Article.all
   end
@@ -40,13 +39,12 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     @article.destroy
 
-    redirect_to root_path
+    redirect_to @article
   end
 
   private
 
-    def article_params
-      params.require(:article).permit(:title, :body)
-    end
-
+  def article_params
+    params.require(:article).permit(:title, :body)
+  end
 end

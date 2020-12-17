@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  root 'posts#index', as: 'home'
+  root "posts#index", as: "home"
 
-  get 'about' => 'pages#about', as: 'about'
+  get "about" => "pages#about", :as => "about"
 
   resources :articles do
     resources :article_comments
@@ -10,5 +10,4 @@ Rails.application.routes.draw do
   resources :posts do
     resources :comments
   end
-
 end

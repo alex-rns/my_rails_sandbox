@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   # http_basic_authenticate_with name: "admin", password: "123", except: [:index, :show]
 
-  before_action :set_post, only: [ :show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
     @post = Post.all
@@ -49,5 +49,4 @@ class PostsController < ApplicationController
   def set_post
     @post = Post.find(params[:id])
   end
-
 end
