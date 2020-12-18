@@ -11,12 +11,12 @@
 <body>
 
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-  <h5 class="my-0 mr-md-auto font-weight-bold">Super-puper blog</h5>
+  <%= link_to image_tag('logo.png', width: 100), home_path, class: "my-0 mr-md-auto" %>
   <nav class="my-2 my-md-0 mr-md-3">
-    <span class="p-2 text-dark"><%= link_to "Главная страница", home_path %></span>
     <span class="p-2 text-dark"><%= link_to "Про нас", about_path %></span>
   </nav>
   <span class="p-2 text-dark"><%= link_to "Добавление статьи", new_post_path %></span>
+  <span class="p-2 text-dark"><%= link_to "Регистрация", registration_path %></span>
 </div>
 <div class="container">
   <div class="row">

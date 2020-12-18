@@ -60,6 +60,7 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     autoprefixer-rails (10.1.0.0)
       execjs
+    bcrypt (3.1.16)
     bindex (0.8.1)
     bootsnap (1.5.1)
       msgpack (~> 1.0)
@@ -210,11 +211,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.2)
   bootstrap (~> 4.5.0)
   byebug
   capybara (>= 2.15)
-  concurrent-ruby (= 1.1.7)
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.2)
